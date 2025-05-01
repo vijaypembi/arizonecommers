@@ -1,6 +1,6 @@
 import { useCart } from "../../context/CartContext";
-import Header from "../Header";
-import { useState } from "react";
+// import Header from "../Header";
+// import { useState } from "react";
 import { useNavigate, Link } from "react-router-dom";
 
 import emptycart from "../../assets/emptycart.json";
@@ -10,10 +10,7 @@ import { BsXLg } from "react-icons/bs";
 const MiniCart = ({ setShowMiniCart }) => {
     const {
         cartItems,
-        addToCart,
-        removeFromCart,
-        updateQuantity,
-        clearCart,
+
         cartTotal,
     } = useCart();
     const numberOfItems = cartItems.length;

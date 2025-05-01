@@ -4,10 +4,11 @@ import { useCart } from "../../context/CartContext";
 import successicon from "../../assets/successicon.json";
 import { useEffect } from "react";
 const OrderConfirmation = () => {
-    const { clearCart, cartTotal } = useCart();
+    const { clearCart } = useCart();
 
     useEffect(() => {
         clearCart();
+        // eslint-disable-next-line
     }, []);
 
     return (

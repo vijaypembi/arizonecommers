@@ -5,7 +5,6 @@ import { useNavigate, Link } from "react-router-dom";
 import emptycart from "../../assets/emptycart.json";
 import { Player } from "@lottiefiles/react-lottie-player";
 import CartCard from "../CartCard";
-import { BsXLg } from "react-icons/bs";
 
 const Cart = ({ setShowMiniCart }) => {
     const { cartItems, cartTotal } = useCart();

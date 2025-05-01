@@ -1,18 +1,9 @@
 import { useCart } from "../../context/CartContext";
 import { useState } from "react";
 
-import { BsFillCartXFill, BsXLg } from "react-icons/bs";
-import { MdOutlineRemoveShoppingCart } from "react-icons/md";
 const CartCard = ({ eachItem }) => {
     // console.log(eachItem);
-    const {
-        cartItems,
-        addToCart,
-        removeFromCart,
-        updateQuantity,
-        clearCart,
-        cartTotal,
-    } = useCart();
+    const { cartItems, addToCart, removeFromCart, updateQuantity } = useCart();
     const existingProduct = cartItems.find((item) => item.id === eachItem.id);
     const initialQuantity = existingProduct?.quantity ?? 0;
     const [quantity, setQuantity] = useState(initialQuantity);
